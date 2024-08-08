@@ -1,0 +1,316 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    column-gap: 1;
+    background-color: #C7B09B;
+    padding: 2em;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    grid-template-areas: 
+    "logo header header header header poll"
+    "side-1-t topper-1 topper-1 topper-2 topper-2 side-2-t"
+    "side-1 pic-a pic-a pic-b pic-b side-2"
+    "side-1 other other other honor side-2"
+    "side-1 other3 other4 other5 honor-1 side-2";
+    /* "footer footer footer footer footer time"; */
+}
+
+.cont-bg {
+    background-image: url(paper\ bg.jpg);
+    background-size: contain;
+}
+
+.bg {
+    background-color: blue;
+    border: 1px solid black;
+}
+
+.logo {
+    grid-area: logo;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    background-color: #b9540c;
+    /* clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%);  */
+    border: 0;
+    clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%); 
+}
+
+.head {
+    grid-area: header;
+    padding: 1em;
+    margin-bottom: 1em;
+    /* margin-left: 1em; */
+    background-color: #fcfef0;
+    border: 0;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    /* border-style: groove; */
+}
+
+.polls {
+    grid-area: poll;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    background-color: #b9540c;
+    border: 0;
+    clip-path: polygon(15% 0%, 85% 0%, 100% 50%, 85% 100%, 15% 100%, 0% 50%); 
+}
+
+.north {
+    background-color: #6098ba;
+    grid-area: side-1-t;
+    margin: 0 1em 0 0;
+}
+
+.side-a {
+    grid-area: side-1;
+    margin: 0 1em 0 0;
+    background-color: #c9d8e6;     
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 50% 100%, 0% 95%);
+   
+}
+
+.south {
+    background-color: #976e3e;
+    grid-area: side-2-t;
+    margin: 0 0 0 1em;
+}
+
+.side-b {
+    grid-area: side-2;
+    margin: 0 0 0 1em;
+    background-color: #c69e6a;
+    /* background-color: #c38d5f; */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 50% 100%, 0% 95%);
+
+}
+
+.A {
+    grid-area: pic-a;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    background-color: #8c9399;
+    /* background-image: url(stark\ flag1.jpg); */
+    /* background-size: cover;
+    background-position: top; */
+    border: 0;
+    clip-path: polygon(10% 0%, 90% 0%, 90% 80%, 50% 100%, 10% 80%);
+    /* padding: 0 100em; */
+    
+}
+
+.B {
+    grid-area: pic-b;
+    margin-bottom: 1em;
+    background-color: #8c9399;
+    /* background-image: url(lan\ flag1.jpg); */
+    /* background-size: cover;
+    background-position: top; */
+    border: 0;
+    clip-path: polygon(10% 0%, 90% 0%, 90% 80%, 50% 100%, 10% 80%);
+}
+
+.A > img,.B > img {
+    width: 175px;
+    height: 200px;
+}
+
+.AB-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.AB-flex img, #AB > img {
+    width: 60px;
+    height: 60px;
+    margin-right: 1em;
+    border-radius: 50%;
+}
+
+.AB-flex h2 {
+    margin-top: 0.75em;
+}
+
+.oc {
+    grid-area: other;
+    padding: 1em 1em 0 1em;
+    font-size: large;
+    background-color: #466e87;
+    border: 0;
+    margin-right: 0.5em;
+    /* clip-path: polygon(6.5% 0%, 93.5% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%); */
+}
+
+#oc3-img, #oc4-img, #oc5-img, #hon-img {
+    width: 50px;
+    height: 50px;
+}
+
+.oc > b {
+    margin-top: 1em;
+}
+
+.oc3 {
+    grid-area: other3;
+    padding: 1em;
+    background-color: #6098ba;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 50% 100%, 0% 85%);
+    margin-right: 0.5em;
+}
+
+.oc4 {
+    grid-area: other4;
+    padding: 1em;
+    background-color: #6098ba;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 50% 100%, 0% 85%);
+    margin-right: 0.5em;
+}
+
+.oc5 {
+    grid-area: other5;
+    padding: 1em;
+    background-color: #6098ba;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 50% 100%, 0% 85%);
+    margin-right: 0.55em;
+}
+
+.hc {
+    grid-area: honor;
+    padding: 1em 1em 0 1em;
+    font-size: large;
+    background-color: #85701c;
+    /* margin-left: 0.5em; */
+    /* clip-path: polygon(20% 0%, 80% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%); */
+    border: 0;
+}
+
+.hon {
+    grid-area: honor-1;
+    padding: 1em;
+    background-color: #c7a729;
+    /* margin-left: 0.57em; */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 50% 100%, 0% 85%);
+
+}
+
+.top-1 {
+    grid-area: topper-1;
+    margin-bottom: 1em;
+    background-color: #8c9399;
+    margin-right: 1em;
+    border: 0;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+
+}
+
+.top-2 {
+    grid-area: topper-2;
+    margin-bottom: 1em;
+    background-color: #8c9399;
+    border: 0;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+
+.top-1 > h2, .top-2 > h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+/* .foot {
+    grid-area: footer;
+    padding: 1em;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-left: 2em;
+}
+
+.dt {
+    grid-area: time;
+    padding: 1em;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-right: 2em;
+    margin-left: 1em;
+} */
+
+.A,.B {
+    padding: 1em 0;
+}
+
+.side-title {
+    margin: 0;
+}
+
+.side-info {
+    border-bottom: 2px solid black;
+    padding-bottom: 1em ;
+
+}
+
+.title {
+    margin: 0;
+}
+
+.polls > h4, p {
+    margin: 0;
+}
+
+.top > h2 {
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+
+
+
+
+.sideflex > h4 {
+    padding-top: 1em;
+}
+
+.sideflex > img {
+    margin-top: 0.5em;
+    width: 75px;
+    height: 90px;
+}
+
+.oc3 img, .oc4 img, .oc5 img, .hon img {
+    width: 75px;
+    height: 100px;
+}
+
+.oc3 p, .oc4 p, .oc5 p, .hon p {
+    font-size: smaller;
+    margin-top: 0.5em;
+}
+
+.oc3-flex, .oc4-flex, .oc5-flex, .hon-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+p {
+    font-family: "Marcellus", serif;
+     
+}
+
+h1, .side-title, h4, h3, h2 {
+    font-family: "Cinzel", serif;
+}
+
+.north, .south {
+    /* clip-path: polygon(15% 0%, 85% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%); */
+    padding: 1.5em;
+
+}
